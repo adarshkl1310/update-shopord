@@ -1,0 +1,1860 @@
+Started GET "/" for 127.0.0.1 at 2019-06-21 18:59:45 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (132.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAas (20171209030210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "aas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030210"]]
+  [1m[35m (130.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBas (20171209030211)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "bas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030211"]]
+  [1m[35m (197.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCas (20171209030212)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "cas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030212"]]
+  [1m[35m (176.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDas (20171209030213)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "das" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030213"]]
+  [1m[35m (175.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEas (20171209030214)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "eas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030214"]]
+  [1m[35m (208.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFas (20171209030215)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "fas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030215"]]
+  [1m[35m (269.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGas (20171209030216)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "gas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030216"]]
+  [1m[35m (176.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHas (20171209030217)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "has" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030217"]]
+  [1m[35m (177.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateIis (20171209030218)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "iis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030218"]]
+  [1m[35m (181.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateJas (20171209030219)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "jas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030219"]]
+  [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateKas (20171209030220)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "kas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030220"]]
+  [1m[35m (186.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLas (20171209030221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "las" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030221"]]
+  [1m[35m (176.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMas (20171209030222)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "mas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030222"]]
+  [1m[35m (173.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNas (20171209030223)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "nas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030223"]]
+  [1m[35m (181.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOas (20171209030224)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "oas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030224"]]
+  [1m[35m (174.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePas (20171209030225)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "pas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030225"]]
+  [1m[35m (184.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQas (20171209030226)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "qas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030226"]]
+  [1m[35m (293.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRas (20171209030227)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030227"]]
+  [1m[35m (272.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSas (20171209030228)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "sas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030228"]]
+  [1m[35m (220.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTts (20171209030229)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "tts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030229"]]
+  [1m[35m (180.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUas (20171209030230)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "uas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030230"]]
+  [1m[35m (182.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVas (20171209030231)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "vas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030231"]]
+  [1m[35m (217.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateWas (20171209030232)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "was" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030232"]]
+  [1m[35m (251.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateXas (20171209030233)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "xas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030233"]]
+  [1m[35m (182.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateYas (20171209030234)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "yas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030234"]]
+  [1m[35m (173.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateZas (20171209030235)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "zas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030235"]]
+  [1m[35m (185.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateZzas (20171209030236)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "zzas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "shop_name" varchar, "offer" varchar, "offerdaystart" varchar, "offerdayend" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030236"]]
+  [1m[35m (183.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGroups (20171209030302)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209030302"]]
+  [1m[35m (173.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20171209035704)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "is_admin" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209035704"]]
+  [1m[35m (355.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnToUsers (20171209040203)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "contry" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "business_type" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "mobile_number" varchar[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "city" varchar[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "industry" varchar[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209040203"]]
+  [1m[35m (150.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToAas (20171209045616)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "aas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045616"]]
+  [1m[35m (160.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToBas (20171209045617)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "bas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045617"]]
+  [1m[35m (149.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToCas (20171209045618)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "cas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045618"]]
+  [1m[35m (148.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToDas (20171209045619)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "das" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045619"]]
+  [1m[35m (226.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToEas (20171209045620)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "eas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045620"]]
+  [1m[35m (148.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToFas (20171209045621)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "fas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045621"]]
+  [1m[35m (149.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToGas (20171209045622)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "gas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045622"]]
+  [1m[35m (160.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToHas (20171209045623)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "has" ADD "user_id" integer[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045623"]]
+  [1m[35m (158.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToIis (20171209045624)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "iis" ADD "user_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045624"]]
+  [1m[35m (150.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToJas (20171209045625)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "jas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045625"]]
+  [1m[35m (159.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToKas (20171209045626)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "kas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045626"]]
+  [1m[35m (149.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToLas (20171209045627)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "las" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045627"]]
+  [1m[35m (149.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToMas (20171209045628)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "mas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045628"]]
+  [1m[35m (149.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToNas (20171209045629)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "nas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045629"]]
+  [1m[35m (150.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToOas (20171209045630)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "oas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045630"]]
+  [1m[35m (159.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToPas (20171209045631)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "pas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045631"]]
+  [1m[35m (147.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToQas (20171209045632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "qas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045632"]]
+  [1m[35m (149.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToRas (20171209045633)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "ras" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045633"]]
+  [1m[35m (149.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToSas (20171209045634)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "sas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045634"]]
+  [1m[35m (149.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToTts (20171209045635)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "tts" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045635"]]
+  [1m[35m (149.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToUas (20171209045636)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "uas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045636"]]
+  [1m[35m (158.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToVas (20171209045637)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "vas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045637"]]
+  [1m[35m (220.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToWas (20171209045638)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "was" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045638"]]
+  [1m[35m (160.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToXas (20171209045639)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "xas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045639"]]
+  [1m[35m (160.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToYas (20171209045640)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "yas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045640"]]
+  [1m[35m (159.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToZas (20171209045641)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "zas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045641"]]
+  [1m[35m (159.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToZzas (20171209045642)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "zzas" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045642"]]
+  [1m[35m (159.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAcms (20171209045828)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "acms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "aa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_9c6e74a404"
+FOREIGN KEY ("aa_id")
+  REFERENCES "aas" ("id")
+, CONSTRAINT "fk_rails_5c481bad3a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_acms_on_aa_id" ON "acms" ("aa_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_acms_on_aa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_acms_on_aa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_acms_on_user_id" ON "acms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045828"]]
+  [1m[35m (190.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBcms (20171209045829)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "bcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ba_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_31e5597c36"
+FOREIGN KEY ("ba_id")
+  REFERENCES "bas" ("id")
+, CONSTRAINT "fk_rails_e08f1c87ef"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_bcms_on_ba_id" ON "bcms" ("ba_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bcms_on_ba_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bcms_on_ba_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_bcms_on_user_id" ON "bcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045829"]]
+  [1m[35m (176.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCcms (20171209045830)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ccms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ca_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_3c30c16230"
+FOREIGN KEY ("ca_id")
+  REFERENCES "cas" ("id")
+, CONSTRAINT "fk_rails_37095e21ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ccms_on_ca_id" ON "ccms" ("ca_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ccms_on_ca_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ccms_on_ca_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_ccms_on_user_id" ON "ccms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045830"]]
+  [1m[35m (176.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDcms (20171209045831)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "dcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "da_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f75fda9850"
+FOREIGN KEY ("da_id")
+  REFERENCES "das" ("id")
+, CONSTRAINT "fk_rails_f043c0d146"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_dcms_on_da_id" ON "dcms" ("da_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dcms_on_da_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dcms_on_da_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_dcms_on_user_id" ON "dcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045831"]]
+  [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEcms (20171209045832)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ecms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ea_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_fa35329b87"
+FOREIGN KEY ("ea_id")
+  REFERENCES "eas" ("id")
+, CONSTRAINT "fk_rails_e4aa208e7a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ecms_on_ea_id" ON "ecms" ("ea_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ecms_on_ea_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ecms_on_ea_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_ecms_on_user_id" ON "ecms" ("user_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045832"]]
+  [1m[35m (175.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFcms (20171209045833)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "fcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "fa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_81ee9937e2"
+FOREIGN KEY ("fa_id")
+  REFERENCES "fas" ("id")
+, CONSTRAINT "fk_rails_f62dc1cf0a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_fcms_on_fa_id" ON "fcms" ("fa_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_fcms_on_fa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_fcms_on_fa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_fcms_on_user_id" ON "fcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045833"]]
+  [1m[35m (177.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGcms (20171209045834)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "gcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ga_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_6be6984024"
+FOREIGN KEY ("ga_id")
+  REFERENCES "gas" ("id")
+, CONSTRAINT "fk_rails_c471971851"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_gcms_on_ga_id" ON "gcms" ("ga_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gcms_on_ga_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gcms_on_ga_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_gcms_on_user_id" ON "gcms" ("user_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045834"]]
+  [1m[35m (176.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateHcms (20171209045835)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "hcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ha_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3d04454aa"
+FOREIGN KEY ("ha_id")
+  REFERENCES "has" ("id")
+, CONSTRAINT "fk_rails_60bb88ee5c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_hcms_on_ha_id" ON "hcms" ("ha_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_hcms_on_ha_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_hcms_on_ha_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_hcms_on_user_id" ON "hcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045835"]]
+  [1m[35m (205.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateIcms (20171209045836)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "icms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ii_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_abad88c24c"
+FOREIGN KEY ("ii_id")
+  REFERENCES "iis" ("id")
+, CONSTRAINT "fk_rails_820a0fafb3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_icms_on_ii_id" ON "icms" ("ii_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_icms_on_ii_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_icms_on_ii_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_icms_on_user_id" ON "icms" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045836"]]
+  [1m[35m (177.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateJcms (20171209045837)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "jcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ja_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_62b745cd87"
+FOREIGN KEY ("ja_id")
+  REFERENCES "jas" ("id")
+, CONSTRAINT "fk_rails_45c7e8e0f3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_jcms_on_ja_id" ON "jcms" ("ja_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_jcms_on_ja_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_jcms_on_ja_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_jcms_on_user_id" ON "jcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045837"]]
+  [1m[35m (177.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateKcms (20171209045838)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "kcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ka_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_da848ade55"
+FOREIGN KEY ("ka_id")
+  REFERENCES "kas" ("id")
+, CONSTRAINT "fk_rails_d99f77f48c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_kcms_on_ka_id" ON "kcms" ("ka_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_kcms_on_ka_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_kcms_on_ka_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_kcms_on_user_id" ON "kcms" ("user_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045838"]]
+  [1m[35m (177.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLcms (20171209045839)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "lcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "la_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_1e18e39cc5"
+FOREIGN KEY ("la_id")
+  REFERENCES "las" ("id")
+, CONSTRAINT "fk_rails_58a0ae762a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_lcms_on_la_id" ON "lcms" ("la_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lcms_on_la_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lcms_on_la_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_lcms_on_user_id" ON "lcms" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045839"]]
+  [1m[35m (174.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMcms (20171209045840)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "mcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ma_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f08b9c6059"
+FOREIGN KEY ("ma_id")
+  REFERENCES "mas" ("id")
+, CONSTRAINT "fk_rails_dec7b4ca5b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_mcms_on_ma_id" ON "mcms" ("ma_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mcms_on_ma_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mcms_on_ma_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_mcms_on_user_id" ON "mcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045840"]]
+  [1m[35m (176.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNcms (20171209045841)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ncms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "na_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_fa38b6e822"
+FOREIGN KEY ("na_id")
+  REFERENCES "nas" ("id")
+, CONSTRAINT "fk_rails_2295942371"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_ncms_on_na_id" ON "ncms" ("na_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ncms_on_na_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ncms_on_na_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ncms_on_user_id" ON "ncms" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045841"]]
+  [1m[35m (176.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOcms (20171209045842)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ocms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "oa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_fd9eed291e"
+FOREIGN KEY ("oa_id")
+  REFERENCES "oas" ("id")
+, CONSTRAINT "fk_rails_3e61115ccd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ocms_on_oa_id" ON "ocms" ("oa_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ocms_on_oa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ocms_on_oa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ocms_on_user_id" ON "ocms" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045842"]]
+  [1m[35m (178.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePcms (20171209045843)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "pcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "pa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_3068f636a3"
+FOREIGN KEY ("pa_id")
+  REFERENCES "pas" ("id")
+, CONSTRAINT "fk_rails_235d574f4c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_pcms_on_pa_id" ON "pcms" ("pa_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pcms_on_pa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pcms_on_pa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_pcms_on_user_id" ON "pcms" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045843"]]
+  [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQcms (20171209045844)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "qcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "qa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_0b08af1ba8"
+FOREIGN KEY ("qa_id")
+  REFERENCES "qas" ("id")
+, CONSTRAINT "fk_rails_58984b9e5b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_qcms_on_qa_id" ON "qcms" ("qa_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_qcms_on_qa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_qcms_on_qa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_qcms_on_user_id" ON "qcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045844"]]
+  [1m[35m (177.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRcms (20171209045845)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "rcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ra_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_4bc8976523"
+FOREIGN KEY ("ra_id")
+  REFERENCES "ras" ("id")
+, CONSTRAINT "fk_rails_bf9d67f57e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_rcms_on_ra_id" ON "rcms" ("ra_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rcms_on_ra_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rcms_on_ra_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_rcms_on_user_id" ON "rcms" ("user_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045845"]]
+  [1m[35m (183.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateScms (20171209045846)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "scms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "sa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_8f5bce1e4f"
+FOREIGN KEY ("sa_id")
+  REFERENCES "sas" ("id")
+, CONSTRAINT "fk_rails_dbccb639a9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_scms_on_sa_id" ON "scms" ("sa_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_scms_on_sa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_scms_on_sa_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_scms_on_user_id" ON "scms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045846"]]
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTcms (20171209045847)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "tcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "tt_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2eb17faa47"
+FOREIGN KEY ("tt_id")
+  REFERENCES "tts" ("id")
+, CONSTRAINT "fk_rails_f5e5415cae"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_tcms_on_tt_id" ON "tcms" ("tt_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tcms_on_tt_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tcms_on_tt_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_tcms_on_user_id" ON "tcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045847"]]
+  [1m[35m (126.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUcms (20171209045848)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ucms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ua_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_22e00dc3b1"
+FOREIGN KEY ("ua_id")
+  REFERENCES "uas" ("id")
+, CONSTRAINT "fk_rails_7098899316"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_ucms_on_ua_id" ON "ucms" ("ua_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ucms_on_ua_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ucms_on_ua_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_ucms_on_user_id" ON "ucms" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045848"]]
+  [1m[35m (132.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVcms (20171209045849)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "vcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "va_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_4de3adabac"
+FOREIGN KEY ("va_id")
+  REFERENCES "vas" ("id")
+, CONSTRAINT "fk_rails_71c4d03402"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_vcms_on_va_id" ON "vcms" ("va_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vcms_on_va_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vcms_on_va_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_vcms_on_user_id" ON "vcms" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045849"]]
+  [1m[35m (282.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateWcms (20171209045850)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "wcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "wa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_71069113f6"
+FOREIGN KEY ("wa_id")
+  REFERENCES "was" ("id")
+, CONSTRAINT "fk_rails_5ee0362805"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_wcms_on_wa_id" ON "wcms" ("wa_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wcms_on_wa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wcms_on_wa_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_wcms_on_user_id" ON "wcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045850"]]
+  [1m[35m (176.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateXcms (20171209045851)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "xcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "xa_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_e910982755"
+FOREIGN KEY ("xa_id")
+  REFERENCES "xas" ("id")
+, CONSTRAINT "fk_rails_25b1115e98"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_xcms_on_xa_id" ON "xcms" ("xa_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_xcms_on_xa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_xcms_on_xa_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_xcms_on_user_id" ON "xcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045851"]]
+  [1m[35m (177.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateYcms (20171209045852)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ycms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "ya_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d4c9915cd2"
+FOREIGN KEY ("ya_id")
+  REFERENCES "yas" ("id")
+, CONSTRAINT "fk_rails_d00464f09d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_ycms_on_ya_id" ON "ycms" ("ya_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ycms_on_ya_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ycms_on_ya_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_ycms_on_user_id" ON "ycms" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045852"]]
+  [1m[35m (177.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateZcms (20171209045853)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "zcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "za_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_6b980b7bc2"
+FOREIGN KEY ("za_id")
+  REFERENCES "zas" ("id")
+, CONSTRAINT "fk_rails_d2b670f1ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_zcms_on_za_id" ON "zcms" ("za_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_zcms_on_za_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_zcms_on_za_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_zcms_on_user_id" ON "zcms" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045853"]]
+  [1m[35m (178.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateZzcms (20171209045854)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "zzcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_0a2fe3ae30"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_zzcms_on_user_id" ON "zzcms" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209045854"]]
+  [1m[35m (182.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBuysels (20171209104023)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "buysels" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "post_type" varchar, "market_type" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209104023"]]
+  [1m[35m (183.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComps (20171209104024)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "comps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_name" varchar, "company_phone" varchar, "company_address" varchar, "year_establishment" integer, "total_employees" integer, "total_company_revenue" varchar, "total_annual_revenue" varchar, "target_contry" varchar, "oem_odm" varchar, "standard_certification" varchar, "success_failure" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209104024"]]
+  [1m[35m (184.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProds (20171209104025)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "prods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "product_price" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209104025"]]
+  [1m[35m (184.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfils (20171209104026)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "profils" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_birth" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209104026"]]
+  [1m[35m (173.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentUphotoToProfils (20171209111506)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "profils" ADD "uphoto_file_name" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "profils" ADD "uphoto_content_type" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "profils" ADD "uphoto_file_size" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "profils" ADD "uphoto_updated_at" datetime[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209111506"]]
+  [1m[35m (155.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentPphotoToProds (20171209111531)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "prods" ADD "pphoto_file_name" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "prods" ADD "pphoto_content_type" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "prods" ADD "pphoto_file_size" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "prods" ADD "pphoto_updated_at" datetime[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209111531"]]
+  [1m[35m (156.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentHphotoToBuysels (20171209111553)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "buysels" ADD "hphoto_file_name" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "buysels" ADD "hphoto_content_type" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "buysels" ADD "hphoto_file_size" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "buysels" ADD "hphoto_updated_at" datetime[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209111553"]]
+  [1m[35m (157.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToBuysels (20171209113256)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "buysels" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209113256"]]
+  [1m[35m (159.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToProds (20171209113257)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "prods" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209113257"]]
+  [1m[35m (160.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToComps (20171209113258)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "comps" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209113258"]]
+  [1m[35m (150.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToProfils (20171209113259)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "profils" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209113259"]]
+  [1m[35m (158.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBuyselcms (20171209114102)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "buyselcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "buysel_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_ffafa2798e"
+FOREIGN KEY ("buysel_id")
+  REFERENCES "buysels" ("id")
+, CONSTRAINT "fk_rails_d296a804af"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_buyselcms_on_buysel_id" ON "buyselcms" ("buysel_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_buyselcms_on_buysel_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_buyselcms_on_buysel_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_buyselcms_on_user_id" ON "buyselcms" ("user_id")[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209114102"]]
+  [1m[35m (176.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCompcms (20171209114103)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "compcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "comp_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_db4076471b"
+FOREIGN KEY ("comp_id")
+  REFERENCES "comps" ("id")
+, CONSTRAINT "fk_rails_080f09ce27"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_compcms_on_comp_id" ON "compcms" ("comp_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_compcms_on_comp_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_compcms_on_comp_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_compcms_on_user_id" ON "compcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209114103"]]
+  [1m[35m (176.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShops (20171209114822)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "shops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "shop_name" varchar, "market_type" varchar, "description" varchar, "monday" varchar, "tuesday" varchar, "wednesday" varchar, "thursday" varchar, "friday" varchar, "saturday" varchar, "sunday" varchar, "timeing" varchar, "shop_city" varchar, "shop_country" varchar, "website_link" varchar, "min_order" varchar, "supply_ability" varchar, "delivery_time" varchar, "transportation" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209114822"]]
+  [1m[35m (182.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToShops (20171209115017)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "shops" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171209115017"]]
+  [1m[35m (157.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentSphotoToShops (20180126112822)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "shops" ADD "sphoto_file_name" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "shops" ADD "sphoto_content_type" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "shops" ADD "sphoto_file_size" integer[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "shops" ADD "sphoto_updated_at" datetime[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180126112822"]]
+  [1m[35m (180.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSearches (20180214023023)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "keywords" varchar, "keywords2" varchar, "keywords3" varchar, "keywords4" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180214023023"]]
+  [1m[35m (173.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateContants (20180218153205)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "contants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_email_number" varchar, "detail" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180218153205"]]
+  [1m[35m (183.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToContants (20180219120701)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "contants" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180219120701"]]
+  [1m[35m (149.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShopcms (20180220090008)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "shopcms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "shop_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_92e8dcd5c7"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+, CONSTRAINT "fk_rails_69e652e0c4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_shopcms_on_shop_id" ON "shopcms" ("shop_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shopcms_on_shop_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shopcms_on_shop_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_shopcms_on_user_id" ON "shopcms" ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180220090008"]]
+  [1m[35m (176.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-21 13:34:42.011440"], ["updated_at", "2019-06-21 13:34:42.011440"]]
+  [1m[35m (103.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_acms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_acms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_acms_on_aa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_acms_on_aa_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bcms_on_ba_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bcms_on_ba_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_buyselcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_buyselcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_buyselcms_on_buysel_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_buyselcms_on_buysel_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ccms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ccms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ccms_on_ca_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ccms_on_ca_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_compcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_compcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_compcms_on_comp_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_compcms_on_comp_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_dcms_on_da_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_dcms_on_da_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ecms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ecms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ecms_on_ea_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ecms_on_ea_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_fcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_fcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_fcms_on_fa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_fcms_on_fa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gcms_on_ga_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gcms_on_ga_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_hcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_hcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_hcms_on_ha_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_hcms_on_ha_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_icms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_icms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_icms_on_ii_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_icms_on_ii_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_jcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_jcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_jcms_on_ja_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_jcms_on_ja_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_kcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_kcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_kcms_on_ka_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_kcms_on_ka_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lcms_on_la_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lcms_on_la_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mcms_on_ma_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mcms_on_ma_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ncms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ncms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ncms_on_na_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ncms_on_na_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ocms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ocms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ocms_on_oa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ocms_on_oa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pcms_on_pa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pcms_on_pa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_qcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_qcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_qcms_on_qa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_qcms_on_qa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rcms_on_ra_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rcms_on_ra_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_scms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_scms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_scms_on_sa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_scms_on_sa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shopcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shopcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shopcms_on_shop_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shopcms_on_shop_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tcms_on_tt_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tcms_on_tt_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ucms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ucms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ucms_on_ua_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ucms_on_ua_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vcms_on_va_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vcms_on_va_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wcms_on_wa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wcms_on_wa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_xcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_xcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_xcms_on_xa_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_xcms_on_xa_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ycms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ycms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ycms_on_ya_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ycms_on_ya_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_zcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_zcms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_zcms_on_za_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_zcms_on_za_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_zzcms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_zzcms_on_user_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2019-06-21 19:04:59 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (0.7ms)
+  [1m[36mBuysel Load (0.2ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_nav_guest.html.erb (3.0ms)
+  Rendered layouts/_nav.html.erb (4.8ms)
+Completed 200 OK in 8065ms (Views: 8007.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:12 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.3ms)
+  [1m[36mBuysel Load (0.3ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_nav_guest.html.erb (3.1ms)
+  Rendered layouts/_nav.html.erb (4.7ms)
+Completed 200 OK in 212ms (Views: 208.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:18 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.4ms)
+  [1m[36mBuysel Load (0.2ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 187ms (Views: 184.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:20 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.0ms)
+  [1m[36mBuysel Load (0.2ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 234ms (Views: 231.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:20 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.4ms)
+  [1m[36mBuysel Load (0.4ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 222ms (Views: 219.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:21 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.3ms)
+  [1m[36mBuysel Load (0.3ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 225ms (Views: 222.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prods" for 127.0.0.1 at 2019-06-21 19:05:22 +0530
+Processing by ProdsController#index as HTML
+  Rendering prods/index.html.erb within layouts/application
+  Rendered prods/_search.html.erb (0.7ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" ORDER BY "shops"."created_at" DESC[0m
+  [1m[36mZza Load (0.1ms)[0m  [1m[34mSELECT "zzas".* FROM "zzas"[0m
+  Rendered prods/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 212ms (Views: 186.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2019-06-21 19:05:25 +0530
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered shops/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_nav_guest.html.erb (2.2ms)
+  Rendered layouts/_nav.html.erb (3.3ms)
+Completed 200 OK in 207ms (Views: 178.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-21 19:05:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (101.3ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 319ms (Views: 289.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-06-21 19:05:30 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (100.2ms)
+  Rendered layouts/_nav_guest.html.erb (2.1ms)
+  Rendered layouts/_nav.html.erb (3.4ms)
+Completed 200 OK in 286ms (Views: 281.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2019-06-21 19:05:34 +0530
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered shops/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_nav_guest.html.erb (2.0ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 227ms (Views: 225.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-21 19:05:35 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 250ms (Views: 248.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2019-06-21 19:05:39 +0530
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered shops/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_nav_guest.html.erb (2.0ms)
+  Rendered layouts/_nav.html.erb (3.3ms)
+Completed 200 OK in 289ms (Views: 287.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-21 19:05:39 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 261ms (Views: 258.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-06-21 19:05:40 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_nav_guest.html.erb (2.2ms)
+  Rendered layouts/_nav.html.erb (3.5ms)
+Completed 200 OK in 201ms (Views: 200.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/prods" for 127.0.0.1 at 2019-06-21 19:05:41 +0530
+Processing by ProdsController#index as HTML
+  Rendering prods/index.html.erb within layouts/application
+  Rendered prods/_search.html.erb (1.5ms)
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" ORDER BY "shops"."created_at" DESC[0m
+  [1m[36mZza Load (0.3ms)[0m  [1m[34mSELECT "zzas".* FROM "zzas"[0m
+  Rendered prods/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 217ms (Views: 214.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:05:44 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.4ms)
+  [1m[36mBuysel Load (0.4ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (3.2ms)
+Completed 200 OK in 232ms (Views: 229.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/prods" for 127.0.0.1 at 2019-06-21 19:19:49 +0530
+Processing by ProdsController#index as HTML
+  Rendering prods/index.html.erb within layouts/application
+  Rendered prods/_search.html.erb (1.4ms)
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" ORDER BY "shops"."created_at" DESC[0m
+  [1m[36mZza Load (0.4ms)[0m  [1m[34mSELECT "zzas".* FROM "zzas"[0m
+  Rendered prods/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 223ms (Views: 219.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:19:51 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.7ms)
+  [1m[36mBuysel Load (0.4ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_nav_guest.html.erb (3.1ms)
+  Rendered layouts/_nav.html.erb (4.2ms)
+Completed 200 OK in 284ms (Views: 280.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2019-06-21 19:20:12 +0530
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered shops/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 251ms (Views: 249.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-21 19:20:16 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_nav_guest.html.erb (2.2ms)
+  Rendered layouts/_nav.html.erb (3.4ms)
+Completed 200 OK in 254ms (Views: 252.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-06-21 19:20:19 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 268ms (Views: 266.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for 127.0.0.1 at 2019-06-21 19:20:23 +0530
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendered shops/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 223ms (Views: 221.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/prods" for 127.0.0.1 at 2019-06-21 19:20:24 +0530
+Processing by ProdsController#index as HTML
+  Rendering prods/index.html.erb within layouts/application
+  Rendered prods/_search.html.erb (1.4ms)
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" ORDER BY "shops"."created_at" DESC[0m
+  [1m[36mZza Load (0.3ms)[0m  [1m[34mSELECT "zzas".* FROM "zzas"[0m
+  Rendered prods/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 214ms (Views: 211.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:20:26 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (1.5ms)
+  [1m[36mBuysel Load (0.3ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (33.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 249ms (Views: 245.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/buysels/new" for 127.0.0.1 at 2019-06-21 19:20:28 +0530
+Processing by BuyselsController#new as HTML
+  Rendering buysels/new.html.erb within layouts/application
+  Rendered buysels/_search2.html.erb (2.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 194ms (Views: 172.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-21 19:20:33 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 253ms (Views: 252.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buysels" for 127.0.0.1 at 2019-06-21 19:20:34 +0530
+Processing by BuyselsController#index as HTML
+  Rendering buysels/index.html.erb within layouts/application
+  Rendered buysels/_search.html.erb (2.0ms)
+  [1m[36mBuysel Load (0.3ms)[0m  [1m[34mSELECT "buysels".* FROM "buysels" ORDER BY "buysels"."created_at" DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered buysels/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 214ms (Views: 211.4ms | ActiveRecord: 0.7ms)
+
+

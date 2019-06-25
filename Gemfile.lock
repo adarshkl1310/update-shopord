@@ -236,7 +236,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   paperclip (~> 5.0.0)
-  pg (~> 0.18.4)
+  pg
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)

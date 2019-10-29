@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'country-select'
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "bootstrap_form"
